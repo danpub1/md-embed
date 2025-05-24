@@ -272,3 +272,10 @@ div.mermaid {
     margin-top: 1.272rem;
     margin-bottom: 1.272rem;
 }
+
+code.language-customizeTheme,
+code.language-customizePage,
+pre:has(> code.language-customizeTheme),
+pre:has(> code.language-customizePage) { 
+    display: none;
+}

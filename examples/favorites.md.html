@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-        <meta charset="utf-8">
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
-        
-        
-        
-        
+        <script id="marked.js" src='https://cdn.jsdelivr.net/npm/marked@15.0.11/lib/marked.umd.min.js'></script>
+        <script id="mermaid.js" type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.esm.min.mjs'; mermaid.initialize({ startOnLoad: true });</script>
+        <script id="purify.js" src='https://cdn.jsdelivr.net/npm/dompurify@3.2.5/dist/purify.min.js'></script>
+        <script id="highlight.js" src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
+        <script id="qrcode.js" type="module">import QRCode from 'https://cdn.jsdelivr.net/npm/qrcode@1.5.4/+esm'; window.QRCode = QRCode;</script>
         <style>pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}/*!
   Theme: GitHub
   Description: Light theme as seen on github.com
@@ -17,7 +18,8 @@
   Outdated base version: https://github.com/primer/github-syntax-light
   Current colors taken from GitHub's CSS
 */.hljs{color:#24292e;background:#fff}.hljs-doctag,.hljs-keyword,.hljs-meta .hljs-keyword,.hljs-template-tag,.hljs-template-variable,.hljs-type,.hljs-variable.language_{color:#d73a49}.hljs-title,.hljs-title.class_,.hljs-title.class_.inherited__,.hljs-title.function_{color:#6f42c1}.hljs-attr,.hljs-attribute,.hljs-literal,.hljs-meta,.hljs-number,.hljs-operator,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-variable{color:#005cc5}.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#032f62}.hljs-built_in,.hljs-symbol{color:#e36209}.hljs-code,.hljs-comment,.hljs-formula{color:#6a737d}.hljs-name,.hljs-quote,.hljs-selector-pseudo,.hljs-selector-tag{color:#22863a}.hljs-subst{color:#24292e}.hljs-section{color:#005cc5;font-weight:700}.hljs-bullet{color:#735c0f}.hljs-emphasis{color:#24292e;font-style:italic}.hljs-strong{color:#24292e;font-weight:700}.hljs-addition{color:#22863a;background-color:#f0fff4}.hljs-deletion{color:#b31d28;background-color:#ffeef0}</style>
-        
+        <script id="md-embed.js">var qrcodes=[],documentRendered=!1,qrcodesRequested=0;function setQrcodes(){0===qrcodesRequested&&documentRendered&&(qrcodes.forEach(((e,d,t)=>{document.getElementById("qrcode"+d).innerHTML=e})),qrcodes=[])}function onBodyLoad(){var e=new marked.Renderer;e.code=function(e){if("mermaid"===e.lang)return'<div class="mermaid">'+e.text+"</div>";if("qrcode"===e.lang||e.lang&&e.lang.startsWith("qrcode-")){qrcodesRequested++;let d=qrcodes.push("")-1;return QRCode.toString(e.text,{type:"svg"}).then((e=>{qrcodes[d]=e,qrcodesRequested--,setQrcodes()})),'<div class="'+("qrcode"===e.lang?"qrcode":"qrcode md-embed md-embed-"+e.lang.substring(7))+'" id="qrcode'+d+'"></div>'}try{return e.lang&&hljs&&hljs.getLanguage(e.lang)?'<pre><code class="language-'+e.lang+' hljs">'+hljs.highlight(e.text,{language:e.lang}).value+"</code></pre>":e.lang?'<pre><code class="language-'+e.lang+'">'+e.text+"</code></pre>":"<pre><code>"+e.text+"</code></pre>"}catch(d){return e.lang?'<pre><code class="language-'+e.lang+'">'+e.text+"</code></pre>":"<pre><code>"+e.text+"</code></pre>"}},marked.setOptions({gfm:!0}),marked.use({renderer:e});document.getElementById("content").innerHTML=DOMPurify.sanitize(marked.parse(document.getElementById("markdown").innerHTML),{USE_PROFILES:{html:!0,svg:!0,svgFilters:!0},ADD_TAGS:["foreignObject"]}),documentRendered=!0,setQrcodes(),document.getElementById("marked.js").remove(),document.getElementById("mermaid.js").remove(),document.getElementById("purify.js").remove(),document.getElementById("highlight.js").remove(),document.getElementById("qrcode.js").remove(),document.getElementById("md-embed.js").remove(),document.getElementById("markdown").remove(),document.body.removeAttribute("onload")}
+</script>
         <style>@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,600;0,800;1,600;1,800&family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Fira+Code:ital,wght@0,400;0,700&display=swap');th{font-weight:unset;text-align:unset}@media print{html{background-color:#FFF !important}a,a:visited{text-decoration:underline}p,img{page-break-inside:avoid !important;break-inside:avoid !important}}html{background-color:#f4f4f4}body{background-color:#FFF;color:#000}strong,b{color:#000}h1,h2,h3,h4,h5,h6{color:#000}blockquote{border-left-color:#f4f4f4}hr,.vscode-dark hr,.vscode-light hr{border-color:#f4f4f4}h1,.vscode-dark h1,.vscode-light h1,h2,.vscode-dark h2,.vscode-light h2{border-bottom-color:#f4f4f4}html{font-size:16px}body{font-family:'Merriweather','Georgia','Times New Roman',serif;font-weight:300;word-spacing:.1em;letter-spacing:0;line-height:150%}body strong,body b{font-weight:700}pre,code{font-family:'Fira Code','Fira Mono','Courier New',monospace;line-height:133%;font-weight:400;word-spacing:0;letter-spacing:0;line-height:inherit;font-size:.880rem}h1,h2,h3,h4,h5,h6{font-family:'Fira Sans','Trebuchet MS','Arial Black','Arial','Helvetica',sans-serif;font-weight:inherit;word-spacing:0;letter-spacing:0;line-height:110%}h1,h2,h3,h4,h5,h6{font-weight:300}h1 strong,h2 strong,h3 strong,h4 strong,h5 strong,h6 strong,h1 b,h2 b,h3 b,h4 b,h5 b,h6 b{font-weight:700}p{font-size:1rem}h1{font-size:2.618rem}h2{font-size:2.058rem}h3{font-size:1.618rem}h4{font-size:1.272rem}h5{font-size:1.000rem}h6{font-size:.786rem}h1>code{font-size:2.058rem}h2>code{font-size:1.618rem}h3>code{font-size:1.272rem}h4>code{font-size:1rem}h5>code{font-size:.786rem}h6>code{font-size:.618rem}html{max-width:100%}body{max-width:64rem;margin:0 auto;padding:1rem;word-wrap:break-word}table{width:100%}p,h1,h2,h3,h4,h5,h6,blockquote,pre,table,ol,ul{margin:0 0 1.272rem 0}li>ul,li>ol{margin-bottom:0}hr{margin:0}body>*:first-child,body>*:first-child>*:first-child,body>*:first-child>*:first-child>*:first-child,body>*:first-child>*:first-child>*:first-child>*:first-child,body>*:first-child>*:first-child>*:first-child>*:first-child>*:first-child,body>*:first-child>*:first-child>*:first-child>*:first-child>*:first-child>*:first-child,body>*:first-child>*:first-child>*:first-child>*:first-child>*:first-child>*:first-child>*:first-child{margin-bottom:0}blockquote>*:last-child{margin-bottom:1.272rem}blockquote>*:first-child{margin-top:1.272rem}blockquote{border-left-width:8px;border-left-style:solid;padding:0 1.272rem}hr,.vscode-dark hr,.vscode-light hr{height:0;border-width:1px;border-style:solid}h1,h2{border-bottom-width:0;border-bottom-style:none}h1,h2,h3,h4,h5,h6{margin-bottom:1.272rem}img{display:block;max-width:100%;margin-left:auto;margin-right:auto;page-break-inside:avoid !important;break-inside:avoid !important}@media print{.mermaid,.qrcode{page-break-inside:avoid !important;break-inside:avoid !important}}div.mermaid{margin-top:1.272rem;margin-bottom:1.272rem}pre,pre>code,.vscode-light pre,.vscode-dark pre,pre>code>code>div{color:#333;background-color:#f4f4f4}pre,.vscode-light pre,.vscode-dark pre{border-width:1px;border-color:#DDD;border-style:solid;border-radius:3px}pre{padding:.618rem 1.272rem;overflow-x:auto}@media print{pre{overflow-x:hidden}}div.md-embed{display:block;width:100%;margin-left:auto;margin-right:auto;page-break-inside:avoid !important;break-inside:avoid !important}img[src*='-full-'],div.md-embed[class*='-full-']{width:100%}img[src*='-seveneighthssize-'],div.md-embed[class*='-seveneighthssize-']{width:87.5%}img[src*='-fivesixthssize-'],div.md-embed[class*='-fivesixthssize-']{width:83.333%}img[src*='-threequarterssize-'],div.md-embed[class*='-threequarterssize-']{width:75%}img[src*='-twothirdssize-'],div.md-embed[class*='-twothirdssize-']{width:66.667%}img[src*='-fiveeighthssize-'],div.md-embed[class*='-fiveeighthssize-']{width:62.5%}img[src*='-halfsize-'],div.md-embed[class*='-halfsize-']{width:49%}img[src*='-thirdsize-'],div.md-embed[class*='-thirdsize-']{width:32%}img[src*='-quartersize-'],div.md-embed[class*='-quartersize-']{width:23.5%}img[src*='-sixthsize-'],div.md-embed[class*='-sixthsize-']{width:15%}img[src*='-eighthsize-'],div.md-embed[class*='eighthsize-']{width:10.75%}img[src*='-maxhalfsize-'],div.md-embed[class*='-maxhalfsize-']{max-width:49%}img[src*='-maxthirdsize-'],div.md-embed[class*='-maxthirdsize-']{max-width:32%}img[src*='-maxquartersize-'],div.md-embed[class*='-maxquartersize-']{max-width:23.5%}img[src*='-maxsixthsize-'],div.md-embed[class*='-maxsixthsize-']{max-width:15%}img[src*='-maxeighthsize-'],div.md-embed[class*='-maxeighthsize-']{max-width:10.75%}img[src*='-floatleft-'],div.md-embed[class*='-floatleft-']{float:left;margin-right:2%}img[src*='-floatright-'],div.md-embed[class*='-floatright-']{float:right;margin-left:2%}img[src*='-left-'],div.md-embed[class*='-left-']{margin-left:0}img[src*='-right-'],div.md-embed[class*='-right-']{margin-right:0}img[src*='-table-'],div.md-embed[class*='-table-']{margin-left:0;margin-right:0}a[href*='-title-']{display:none}.md-embed-group:after,.md-embed-padded-group:after{content:"";display:table;clear:both}.md-embed-padded-group{margin-top:1.272rem;margin-bottom:1.272rem}div.md-embed-notice.note{background:#e7f2fa}div.md-embed-notice.tip{background:#e6f9e6}div.md-embed-notice.info{background:#fff2db}div.md-embed-notice.warning{background:#fae2e2}div.md-embed-notice.note p:first-child{background:#6ab0de;color:#FFF;padding:.375rem 1rem}div.md-embed-notice.tip p:first-child{background:#77c577;color:#FFF;padding:.375rem 1rem}div.md-embed-notice.info p:first-child{background:#f0b37e;color:#FFF;padding:.375rem 1rem}div.md-embed-notice.warning p:first-child{background:#df6f6c;color:#FFF;padding:.375rem 1rem}div.md-embed-notice{margin:0 0 1.272rem 0;position:relative;border-radius:3px}div.md-embed-notice p:first-child{border-top-left-radius:3px;border-top-right-radius:3px}div.md-embed-notice>*{padding:15px;display:block;margin-top:0;margin-bottom:0}div.md-embed-title+h1,div.md-embed-title+h2{margin-bottom:.382rem}div.md-embed-title+h3,div.md-embed-title+h4,div.md-embed-title+h5,div.md-embed-title+h6{margin-bottom:0}@media(min-width:32rem){div#content>p:first-child+h1:first-of-type{margin-top:-1.8em;margin-bottom:1.8rem}div#content>p:first-child+h2:first-of-type{margin-top:-2em;margin-bottom:1.6rem}div#content>p:first-child+h1:first-of-type,div#content>p:first-child+h2:first-of-type{margin-left:.25em;border-bottom:0}div#content>p:first-child+h1:first-of-type,div#content>p:first-child+h2:first-of-type,div#content>p:first-child+h1:first-of-type strong,div#content>p:first-child+h2:first-of-type strong{color:white}div#content>p:first-child>img[src*='-banner-'],div#content>p:first-child>a>img[src*='-banner-']{border-bottom-width:.5em;border-bottom-color:#4872ae;border-bottom-style:solid;width:100%}div#content>p:first-child+h1:first-of-type a,div#content>p:first-child+h2:first-of-type a{text-decoration:none}}div#content>hr:last-of-type+p:last-child{font-size:.786rem;margin-top:.5rem;margin-bottom:0}pre code.hljs{padding:0}code.hljs{padding:0}.hljs{background:#f4f4f4}@media print{pre code.hljs,code.hljs{word-wrap:break-word}}
 </style>
 
@@ -40,56 +42,65 @@
         </style>
       
     </head>
-    <body>
+    <body onload="onBodyLoad()">
         <style>
 
         </style>
-        
-        <div id="content"><p><img title="Favorites" alt="Favorites" src="#-banner-"></p>
-<h1><strong>Favorite Bible Verses and Hymns</strong></h1>
-<h2>Baptism Verse</h2>
-<blockquote>
-<p>This section of scripture is full of warnings of the signs of the end of times.
-But along with those warnings are these promises which give us encouragement to stand firm</p>
-</blockquote>
-<p><ins>The one who stands firm to the end will be saved.</ins> ...
+        <script id="markdown" type="text/markdown">
+![Favorites](#-banner- "Favorites")
+# **Favorite Bible Verses and Hymns**
+
+## Baptism Verse
+
+> This section of scripture is full of warnings of the signs of the end of times.
+> But along with those warnings are these promises which give us encouragement to stand firm
+
+<ins>The one who stands firm to the end will be saved.</ins> ...
 At that time people will see the Son of Man coming in clouds with great power and glory.
 And he will send his angels and gather his elect from the four winds, from the ends of the earth to the ends of the heavens. ...
-Heaven and earth will pass away, but my words will never pass away.</p>
-<p><em><a href="https://www.biblegateway.com/passage/?search=mark%2013%3A13b%2C%2026-27%2C%2031&amp;version=NIV">Mark 13:13b, 26-27, 31</a>, NIV</em></p>
-<h2>Confirmation Verse</h2>
-<blockquote>
-<p>I always like to add verse 10</p>
-</blockquote>
-<p><ins>For it is by grace you have been saved, through faith — and this is not from yourselves, it is the gift of God —
+Heaven and earth will pass away, but my words will never pass away.
+
+*[Mark 13:13b, 26-27, 31](https://www.biblegateway.com/passage/?search=mark%2013%3A13b%2C%2026-27%2C%2031&version=NIV), NIV*
+
+## Confirmation Verse
+
+> I always like to add verse 10
+
+<ins>For it is by grace you have been saved, through faith — and this is not from yourselves, it is the gift of God —
 not by works, so that no one can boast.</ins>
-For we are God’s handiwork, created in Christ Jesus to do good works, which God prepared in advance for us to do.</p>
-<p><em><a href="https://www.biblegateway.com/passage/?search=ephesians%202%3A8-10&amp;version=NIV">Ephesians 2:8-10</a>, NIV</em></p>
-<h2>Easter Reading</h2>
-<blockquote>
-<p>I got to read these verses for a couple of Easter Vigil services at church.
-I especially like them because of the confidence they express,
-and the deep desire to see the fulfillment of our salvation.</p>
-</blockquote>
-<p>Oh, that my words were recorded, that they were written on a scroll,
+For we are God’s handiwork, created in Christ Jesus to do good works, which God prepared in advance for us to do.
+
+*[Ephesians 2:8-10](https://www.biblegateway.com/passage/?search=ephesians%202%3A8-10&version=NIV), NIV*
+
+## Easter Reading
+
+> I got to read these verses for a couple of Easter Vigil services at church.
+> I especially like them because of the confidence they express,
+> and the deep desire to see the fulfillment of our salvation.
+
+Oh, that my words were recorded, that they were written on a scroll,
 that they were inscribed with an iron tool on lead, or engraved in rock forever!
 I know that my redeemer lives, and that in the end he will stand on the earth.
 And after my skin has been destroyed, yet in my flesh I will see God;
-I myself will see him with my own eyes — I, and not another. How my heart yearns within me!</p>
-<p><em><a href="https://www.biblegateway.com/passage/?search=job%2019%3A23-27&amp;version=NIV">Job 19:23-27</a>, NIV</em></p>
-<h2>Oaks of Righteousness</h2>
-<blockquote>
-<p>So much to love.  These verses were read by our Savior at the start of his ministry.
-I imagine the people in the synagogue just having their jaws drop open.
-(But sadly if that was their reaction, it wasn't their only reaction.)</p>
-<p>In the first three verses, such a wonderful Gospel message, repeated over and over
-and culminating in the word picture <strong>Oaks of Righteousness</strong>,
-and adding <strong>a planting of the Lord</strong> (saved by grace)
-<strong>for the display of his splendor</strong> (what's our purpose but to glorify God)</p>
-<p>The last two verses we had at our wedding, a fitting word picture 
-to encourage our love for God and for each other.</p>
-</blockquote>
-<p>The Spirit of the Sovereign Lord is on me, because the Lord has anointed me to proclaim good news to the poor.
+I myself will see him with my own eyes — I, and not another. How my heart yearns within me!
+
+*[Job 19:23-27](https://www.biblegateway.com/passage/?search=job%2019%3A23-27&version=NIV), NIV*
+
+## Oaks of Righteousness
+
+> So much to love.  These verses were read by our Savior at the start of his ministry.
+> I imagine the people in the synagogue just having their jaws drop open.
+> (But sadly if that was their reaction, it wasn't their only reaction.)
+> 
+> In the first three verses, such a wonderful Gospel message, repeated over and over
+> and culminating in the word picture **Oaks of Righteousness**,
+> and adding **a planting of the Lord** (saved by grace)
+> **for the display of his splendor** (what's our purpose but to glorify God)
+> 
+> The last two verses we had at our wedding, a fitting word picture 
+> to encourage our love for God and for each other.
+
+The Spirit of the Sovereign Lord is on me, because the Lord has anointed me to proclaim good news to the poor.
 He has sent me to bind up the brokenhearted, to proclaim freedom for the captives and release from darkness for the prisoners,
 to proclaim the year of the Lord’s favor and the day of vengeance of our God,
 to comfort all who mourn,
@@ -97,35 +108,44 @@ and provide for those who grieve in Zion —
 to bestow on them a crown of beauty instead of ashes,
 the oil of joy instead of mourning,
 and a garment of praise instead of a spirit of despair.
-They will be called oaks of righteousness, a planting of the Lord for the display of his splendor.</p>
-<p>I delight greatly in the Lord; my soul rejoices in my God. 
+They will be called oaks of righteousness, a planting of the Lord for the display of his splendor.
+
+I delight greatly in the Lord; my soul rejoices in my God. 
 For he has clothed me with garments of salvation and arrayed me in a robe of his righteousness,
 as a bridegroom adorns his head like a priest, and as a bride adorns herself with her jewels.
 For as the soil makes the sprout come up and a garden causes seeds to grow,
-so the Sovereign Lord will make righteousness and praise spring up before all nations.</p>
-<p><em><a href="https://www.biblegateway.com/passage/?search=isaiah%2061%3A1-3%2C%2010-11&amp;version=NIV">Isaiah 61:1-3, 10-11</a>, NIV</em></p>
-<h2>Romans 8</h2>
-<blockquote>
-<p> So much encouragement in this chapter.</p>
-</blockquote>
-<p><strong>Present Suffering and Future Glory</strong></p>
-<p>I consider that our present sufferings are not worth comparing with the glory that will be revealed in us. 
-<em>[Is it worth suffering for our faith?  Yes, because in the end we get to be with God.]</em>
+so the Sovereign Lord will make righteousness and praise spring up before all nations.
+
+*[Isaiah 61:1-3, 10-11](https://www.biblegateway.com/passage/?search=isaiah%2061%3A1-3%2C%2010-11&version=NIV), NIV*
+
+## Romans 8
+
+>  So much encouragement in this chapter.
+
+**Present Suffering and Future Glory**
+
+I consider that our present sufferings are not worth comparing with the glory that will be revealed in us. 
+*[Is it worth suffering for our faith?  Yes, because in the end we get to be with God.]*
 For the creation waits in eager expectation for the children of God to be revealed.
 For the creation was subjected to frustration, not by its own choice, but by the will of the one who subjected it, in hope
-that the creation itself will be liberated from its bondage to decay and brought into the freedom and glory of the children of God.</p>
-<p>We know that the whole creation has been groaning as in the pains of childbirth right up to the present time.
+that the creation itself will be liberated from its bondage to decay and brought into the freedom and glory of the children of God.
+
+We know that the whole creation has been groaning as in the pains of childbirth right up to the present time.
 Not only so, but we ourselves, who have the firstfruits of the Spirit, groan inwardly as we wait eagerly for our adoption to sonship, 
-the redemption of our bodies. <em>[Echoes of Job 19:27]</em>
+the redemption of our bodies. *[Echoes of Job 19:27]*
 For in this hope we were saved. But hope that is seen is no hope at all. Who hopes for what they already have?
-But if we hope for what we do not yet have, we wait for it patiently.</p>
-<p>In the same way, the Spirit helps us in our weakness. We do not know what we ought to pray for, but the Spirit himself intercedes for us through wordless groans.
-And he who searches our hearts knows the mind of the Spirit <em>[Grace!]</em>, because the Spirit intercedes for God’s people in accordance with the will of God.</p>
-<p>And we know that in all things God works for the good of those who love him, who have been called according to his purpose.
+But if we hope for what we do not yet have, we wait for it patiently.
+
+In the same way, the Spirit helps us in our weakness. We do not know what we ought to pray for, but the Spirit himself intercedes for us through wordless groans.
+And he who searches our hearts knows the mind of the Spirit *[Grace!]*, because the Spirit intercedes for God’s people in accordance with the will of God.
+
+And we know that in all things God works for the good of those who love him, who have been called according to his purpose.
 For those God foreknew he also predestined to be conformed to the image of his Son, that he might be the firstborn among many brothers and sisters.
-And those he predestined, he also called; those he called, he also justified; those he justified, he also glorified.</p>
-<p><strong>More Than Conquerors</strong></p>
-<p>What, then, shall we say in response to these things? If God is for us, who can be against us?
+And those he predestined, he also called; those he called, he also justified; those he justified, he also glorified.
+
+**More Than Conquerors**
+
+What, then, shall we say in response to these things? If God is for us, who can be against us?
 He who did not spare his own Son, but gave him up for us all — how will he not also, along with him, graciously give us all things?
 Who will bring any charge against those whom God has chosen? It is God who justifies.
 Who then is the one who condemns? No one. Christ Jesus who died — more than that, who was raised to life — is at the right hand of God and is also interceding for us.
@@ -133,59 +153,171 @@ Who shall separate us from the love of Christ? Shall trouble or hardship or pers
 As it is written: “For your sake we face death all day long; we are considered as sheep to be slaughtered.”
 No, in all these things we are more than conquerors through him who loved us.
 For I am convinced that neither death nor life, neither angels nor demons, neither the present nor the future, nor any powers,
-neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord.</p>
-<p><em><a href="https://www.biblegateway.com/passage/?search=Romans%208%3A18-39&amp;version=NIV">Romans 8:18-39</a>, NIV</em></p>
-<h2>Jesus Lives, the Victory's Won</h2>
-<p>Christian F. Gellert</p>
+neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord.
+
+*[Romans 8:18-39](https://www.biblegateway.com/passage/?search=Romans%208%3A18-39&version=NIV), NIV*
+
+## Jesus Lives, the Victory's Won
+
+Christian F. Gellert
+
 <div class="md-embed md-embed-group">
 <div class="md-embed md-embed-halfsize-floatleft-">
 
-<p>Jesus lives! The vict'ry's won!<br>Death no longer can appall me.<br>Jesus lives! Death's reign is done!<br>From the grave Christ will recall me.<br>Brighter scenes will then commence;<br>this shall be my confidence.</p>
-<p>Jesus lives! To him the throne<br>high o'er heav'n and earth is given.<br>I shall go where he is gone,<br>live and reign with him in heaven.<br>God is faithful; doubtings, hence!<br>This shall be my confidence.</p>
-<p>Jesus lives! For me he died;<br>hence will I, to Jesus living,<br>pure in heart and act abide,<br>praise to him and glory giving.<br>All I need God will dispense;<br>this shall be my confidence.</p>
+Jesus lives! The vict'ry's won!  
+Death no longer can appall me.  
+Jesus lives! Death's reign is done!  
+From the grave Christ will recall me.  
+Brighter scenes will then commence;  
+this shall be my confidence.
+
+Jesus lives! To him the throne  
+high o'er heav'n and earth is given.  
+I shall go where he is gone,  
+live and reign with him in heaven.  
+God is faithful; doubtings, hence!  
+This shall be my confidence.
+
+Jesus lives! For me he died;  
+hence will I, to Jesus living,  
+pure in heart and act abide,  
+praise to him and glory giving.  
+All I need God will dispense;  
+this shall be my confidence.
+
 </div>
 <div class="md-embed md-embed-halfsize-right-">
 
-<p>Jesus lives! I know full well<br>nothing me from him shall sever.<br>Life nor death nor pow'rs of hell<br>part me now from Christ forever.<br>God will be a sure defense;<br>this shall be my confidence.</p>
-<p>Jesus lives! And now is death<br>but the gate to life immortal;<br>this shall calm my trembling breath<br>when I pass its gloomy portal.<br>Faith shall cry, as fails each sense:<br>Jesus is my confidence!</p>
+Jesus lives! I know full well  
+nothing me from him shall sever.  
+Life nor death nor pow'rs of hell  
+part me now from Christ forever.  
+God will be a sure defense;  
+this shall be my confidence.
+
+Jesus lives! And now is death  
+but the gate to life immortal;  
+this shall calm my trembling breath  
+when I pass its gloomy portal.  
+Faith shall cry, as fails each sense:  
+Jesus is my confidence!
+
 </div>
 </div>
 
-<p><em><a href="https://hymnary.org/hymn/CWH2021/444">Christian Worship #444</a></em></p>
-<h2>Salvation Unto Us Has come</h2>
-<blockquote>
-<p>This brings to mind so many Bible verses</p>
-</blockquote>
-<p>Paul Speratus</p>
+*[Christian Worship #444](https://hymnary.org/hymn/CWH2021/444)*
+
+## Salvation Unto Us Has come
+
+> This brings to mind so many Bible verses
+
+Paul Speratus
+
 <div class="md-embed md-embed-group">
 <div class="md-embed md-embed-halfsize-floatleft-">
 
-<p>Salvation unto us has come<br>by God’s free grace and favor;<br>good works cannot avert our doom,<br>they help and save us never.<br>Faith looks to Jesus Christ alone,<br>who did for all the world atone;<br>he is our one Redeemer.</p>
-<p>What God did in his law demand<br>and none to him could render<br>caused wrath and woe on ev'ry hand<br>for man, the vile offender.<br>Our flesh has not the pure desires<br>the spirit of the law requires,<br>and lost is our condition.</p>
-<p>It was a false, misleading dream<br>that God his law had given<br>that sinners could themselves redeem<br>and by their works gain heaven.<br>The law is but a mirror bright<br>to bring the inbred sin to light<br>that lurks within our nature.</p>
-<p>From sin our flesh could not abstain,<br>sin held its sway unceasing;<br>the task was hopeless and in vain,<br>our guilt was e’er increasing.<br>None can remove sin’s poisoned dart<br>or purify our guileful heart,<br>so deep is our corruption.</p>
-<p>Yet as the law must be fulfilled<br>or we must die despairing,<br>Christ came and has God’s anger stilled,<br>our human nature sharing.<br>He has for us the law obeyed<br>and thus the Father’s vengeance stayed<br>which over us impended.</p>
+Salvation unto us has come  
+by God’s free grace and favor;  
+good works cannot avert our doom,  
+they help and save us never.  
+Faith looks to Jesus Christ alone,  
+who did for all the world atone;  
+he is our one Redeemer.
+
+What God did in his law demand  
+and none to him could render  
+caused wrath and woe on ev'ry hand  
+for man, the vile offender.  
+Our flesh has not the pure desires  
+the spirit of the law requires,  
+and lost is our condition.
+
+It was a false, misleading dream  
+that God his law had given  
+that sinners could themselves redeem  
+and by their works gain heaven.  
+The law is but a mirror bright  
+to bring the inbred sin to light  
+that lurks within our nature.
+
+From sin our flesh could not abstain,  
+sin held its sway unceasing;  
+the task was hopeless and in vain,  
+our guilt was e’er increasing.  
+None can remove sin’s poisoned dart  
+or purify our guileful heart,  
+so deep is our corruption.
+
+Yet as the law must be fulfilled  
+or we must die despairing,  
+Christ came and has God’s anger stilled,  
+our human nature sharing.  
+He has for us the law obeyed  
+and thus the Father’s vengeance stayed  
+which over us impended.
+
 </div>
 <div class="md-embed md-embed-halfsize-right-">
 
-<p>Since Christ has full atonement made<br>and brought to us salvation,<br>each Christian therefore may be glad<br>and build on this foundation.<br>Your grace alone, dear Lord, I plead<br>your death is now my life indeed,<br>for you have paid my ransom.</p>
-<p>Let me not doubt, but truly see<br>your Word cannot be broken;<br>your call rings out, "Come unto me!"<br>No falsehood have you spoken.<br>Baptized into your precious name,<br>my faith cannot be put to shame,<br>and I shall never perish.</p>
-<p>The law reveals the guilt of sin<br>and makes us conscience-stricken;<br>but then the gospel enters in<br>the sinful soul to quicken.<br>Come to the cross, trust Christ, and live;<br>the law no peace can ever give,<br>no comfort and no blessing.</p>
-<p>Faith clings to Jesus' cross alone<br>and rests in him unceasing;<br>and by its fruits true faith is known,<br>with love and hope increasing.<br>For faith alone can justify;<br>works serve our neighbor and supply<br>the proof that faith is living.</p>
-<p>All blessing, honor, thanks, and praise<br>to Father, Son, and Spirit,<br>the God who saved us by his grace;<br>all glory to his merit!<br>O triune God in heav’n above,<br>you have revealed your saving love,<br>your blessèd name be hallowed!</p>
+Since Christ has full atonement made  
+and brought to us salvation,  
+each Christian therefore may be glad  
+and build on this foundation.  
+Your grace alone, dear Lord, I plead  
+your death is now my life indeed,  
+for you have paid my ransom.
+
+Let me not doubt, but truly see  
+your Word cannot be broken;  
+your call rings out, "Come unto me!"  
+No falsehood have you spoken.  
+Baptized into your precious name,  
+my faith cannot be put to shame,  
+and I shall never perish.
+
+The law reveals the guilt of sin  
+and makes us conscience-stricken;  
+but then the gospel enters in  
+the sinful soul to quicken.  
+Come to the cross, trust Christ, and live;  
+the law no peace can ever give,  
+no comfort and no blessing.
+
+Faith clings to Jesus' cross alone  
+and rests in him unceasing;  
+and by its fruits true faith is known,  
+with love and hope increasing.  
+For faith alone can justify;  
+works serve our neighbor and supply  
+the proof that faith is living.
+
+All blessing, honor, thanks, and praise  
+to Father, Son, and Spirit,  
+the God who saved us by his grace;  
+all glory to his merit!  
+O triune God in heav’n above,  
+you have revealed your saving love,  
+your blessèd name be hallowed!
+
 </div>
 </div>
 
-<p><em><a href="https://hymnary.org/hymn/CWH2021/558#text">Christian Worship #558</a></em></p>
-<h2>Be Ye Glad</h2>
-<blockquote>
-<p>I especially love the chorus.</p>
-</blockquote>
-<p>Michael Kelly Blanchard</p>
-<p><em>Chorus:</em><br>Oh, be ye glad, be ye glad,<br>Every debt that you ever had<br>Has been paid up in full by the grace of the Lord,<br>Be ye glad, be ye glad, be ye glad.</p>
-<p><em><a href="https://www.michaelkellyblanchard.com/writings/lyrics_glad.htm">Be Ye Glad</a>, <a href="https://www.michaelkellyblanchard.com/about/beyeglad.htm">About</a></em>
-        </p>
-</div>
-    
+*[Christian Worship #558](https://hymnary.org/hymn/CWH2021/558#text)*
 
-</body></html>
+## Be Ye Glad
+
+> I especially love the chorus.
+
+Michael Kelly Blanchard
+
+*Chorus:*  
+Oh, be ye glad, be ye glad,  
+Every debt that you ever had  
+Has been paid up in full by the grace of the Lord,  
+Be ye glad, be ye glad, be ye glad.
+
+*[Be Ye Glad](https://www.michaelkellyblanchard.com/writings/lyrics_glad.htm), [About](https://www.michaelkellyblanchard.com/about/beyeglad.htm)*
+        </script>
+        <div id="content"></div>
+    </body>
+</html>
