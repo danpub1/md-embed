@@ -1,6 +1,6 @@
 # md-embed
 
-[https://danpub1.github.io/md-embed/release/md-embed-doc.html](https://danpub1.github.io/md-embed/release/md-embed-doc.html)
+[https://danpub1.github.io/md-embed/release/md-embed-doc.md.html](https://danpub1.github.io/md-embed/release/md-embed-doc.md.html)
 
 A lightweight way to publish Markdown.
 
