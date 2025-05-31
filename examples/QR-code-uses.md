@@ -10,7 +10,8 @@ https://www.startrek.com
 ```
 https://www.startrek.com
 ```
-[]()
+
+See [RFC-3986](https://www.rfc-editor.org/rfc/rfc3986) for reference.
 ### Send an email
 
 ##### mailto uri
@@ -30,7 +31,7 @@ mailto:jimkirk@starfleet.fed?cc=spock@starfleet.fed,montys@starfleet.fed&subject
 mailto:jimkirk@starfleet.fed?cc=spock@starfleet.fed,montys@starfleet.fed&subject=Party%20For%20Bones&body=RSVP:%20I%20am%20coming!
 ```
 
-See [RFC-6068](https://www.rfc-editor.org/rfc/rfc6068.txt) for reference.
+See [RFC-6068](https://www.rfc-editor.org/rfc/rfc6068) for reference.
 
 ### Send a text message
 
@@ -50,7 +51,7 @@ sms:5551212?body=RSVP:%20I'm%20Coming!
 sms:5551212?body=RSVP:%20I'm%20Coming!
 ```
 
-See [RFC-5724](https://www.rfc-editor.org/rfc/rfc5724.txt) for reference.
+See [RFC-5724](https://www.rfc-editor.org/rfc/rfc5724) for reference.
 ### Make a phone call
 
 ##### tel uri
@@ -62,7 +63,7 @@ tel:555-1212
 tel:555-1212
 ```
 
-See [RFC-3966](https://www.rfc-editor.org/rfc/rfc3966.txt) for reference.
+See [RFC-3966](https://www.rfc-editor.org/rfc/rfc3966) for reference.
 
 ### Share contact info
 
@@ -116,7 +117,7 @@ URL;TYPE=Homepage:https://startrek.com
 END:VCARD
 ```
 
-See [RFC-6350](https://www.rfc-editor.org/rfc/rfc6350.txt) for reference.
+See [RFC-6350](https://www.rfc-editor.org/rfc/rfc6350) for reference.
 
 ### Share a location
 
@@ -140,7 +141,7 @@ geo:41.479911,-91.580276?q=41.479911,-91.580276&z=21
 geo:41.479911,-91.580276?q=41.479911,-91.580276&z=21
 ```
 
-See [RFC-5870](https://www.rfc-editor.org/rfc/rfc5870.txt) for reference.
+See [RFC-5870](https://www.rfc-editor.org/rfc/rfc5870) for reference.
 
 ##### Web link to mapping service
 
@@ -210,7 +211,7 @@ SUMMARY:Captain Kirk's Birthday
 END:VEVENT
 ```
 
-See [RFC-5545](https://www.rfc-editor.org/rfc/rfc5545.txt) for reference.
+See [RFC-5545](https://www.rfc-editor.org/rfc/rfc5545) for reference.
 
 ### Connect to Wi-Fi
 
