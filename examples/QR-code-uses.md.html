@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script id="marked.js" src='https://cdn.jsdelivr.net/npm/marked@15.0.11/lib/marked.umd.min.js'></script>
+        <script id="mermaid.js" type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.esm.min.mjs'; mermaid.initialize({ startOnLoad: true });</script>
+        <script id="purify.js" src='https://cdn.jsdelivr.net/npm/dompurify@3.2.5/dist/purify.min.js'></script>
+        <script id="highlight.js" src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
+        <script id="qrcode.js" type="module">import QRCode from 'https://cdn.jsdelivr.net/npm/qrcode@1.5.4/+esm'; window.QRCode = QRCode;</script>
+        <style>pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}/*!
+  Theme: GitHub
+  Description: Light theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-light
+  Current colors taken from GitHub's CSS
+*/.hljs{color:#24292e;background:#fff}.hljs-doctag,.hljs-keyword,.hljs-meta .hljs-keyword,.hljs-template-tag,.hljs-template-variable,.hljs-type,.hljs-variable.language_{color:#d73a49}.hljs-title,.hljs-title.class_,.hljs-title.class_.inherited__,.hljs-title.function_{color:#6f42c1}.hljs-attr,.hljs-attribute,.hljs-literal,.hljs-meta,.hljs-number,.hljs-operator,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-variable{color:#005cc5}.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#032f62}.hljs-built_in,.hljs-symbol{color:#e36209}.hljs-code,.hljs-comment,.hljs-formula{color:#6a737d}.hljs-name,.hljs-quote,.hljs-selector-pseudo,.hljs-selector-tag{color:#22863a}.hljs-subst{color:#24292e}.hljs-section{color:#005cc5;font-weight:700}.hljs-bullet{color:#735c0f}.hljs-emphasis{color:#24292e;font-style:italic}.hljs-strong{color:#24292e;font-weight:700}.hljs-addition{color:#22863a;background-color:#f0fff4}.hljs-deletion{color:#b31d28;background-color:#ffeef0}</style>
+        <script id="md-embed.js">var qrcodes=[],documentRendered=!1,qrcodesRequested=0;function setQrcodes(){0===qrcodesRequested&&documentRendered&&(qrcodes.forEach(((e,d,t)=>{document.getElementById("qrcode"+d).innerHTML=e})),qrcodes=[])}function onBodyLoad(){var e=new marked.Renderer;e.code=function(e){if("mermaid"===e.lang)return'<div class="mermaid">'+e.text+"</div>";if("qrcode"===e.lang||e.lang&&e.lang.startsWith("qrcode-")){qrcodesRequested++;let d=qrcodes.push("")-1;return QRCode.toString(e.text,{type:"svg"}).then((e=>{qrcodes[d]=e,qrcodesRequested--,setQrcodes()})),'<div class="'+("qrcode"===e.lang?"qrcode":"qrcode md-embed md-embed-"+e.lang.substring(7))+'" id="qrcode'+d+'"></div>'}try{return e.lang&&hljs&&hljs.getLanguage(e.lang)?'<pre><code class="language-'+e.lang+' hljs">'+hljs.highlight(e.text,{language:e.lang}).value+"</code></pre>":e.lang?'<pre><code class="language-'+e.lang+'">'+e.text+"</code></pre>":"<pre><code>"+e.text+"</code></pre>"}catch(d){return e.lang?'<pre><code class="language-'+e.lang+'">'+e.text+"</code></pre>":"<pre><code>"+e.text+"</code></pre>"}},marked.setOptions({gfm:!0}),marked.use({renderer:e});document.getElementById("content").innerHTML=DOMPurify.sanitize(marked.parse(document.getElementById("markdown").innerHTML),{USE_PROFILES:{html:!0,svg:!0,svgFilters:!0},ADD_TAGS:["foreignObject"]}),documentRendered=!0,setQrcodes(),document.getElementById("marked.js").remove(),document.getElementById("mermaid.js").remove(),document.getElementById("purify.js").remove(),document.getElementById("highlight.js").remove(),document.getElementById("qrcode.js").remove(),document.getElementById("md-embed.js").remove(),document.getElementById("markdown").remove(),document.body.removeAttribute("onload")}
+</script>
+        <style>@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,600;0,800;1,600;1,800&family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&family=Fira+Code:ital,wght@0,400;0,700&display=swap');th{font-weight:unset;text-align:unset}@media print{html{background-color:#FFF !important}a,a:visited{text-decoration:underline}p,img{page-break-inside:avoid !important;break-inside:avoid !important}}html{background-color:#f4f4f4}body{background-color:#FFF;color:#000}strong,b{color:#000}h1,h2,h3,h4,h5,h6{color:#000}blockquote{border-left-color:#f4f4f4}hr,.vscode-dark hr,.vscode-light hr{border-color:#f4f4f4}h1,.vscode-dark h1,.vscode-light h1,h2,.vscode-dark h2,.vscode-light h2{border-bottom-color:#f4f4f4}html{font-size:16px}body{font-family:'Merriweather','Georgia','Times New Roman',serif;font-weight:300;word-spacing:.1em;letter-spacing:0;line-height:150%}body strong,body b{font-weight:700}pre,code{font-family:'Fira Code','Fira Mono','Courier New',monospace;line-height:133%;font-weight:400;word-spacing:0;letter-spacing:0;line-height:inherit;font-size:.880rem}h1,h2,h3,h4,h5,h6{font-family:'Fira Sans','Trebuchet MS','Arial Black','Arial','Helvetica',sans-serif;font-weight:inherit;word-spacing:0;letter-spacing:0;line-height:110%}h1,h2,h3,h4,h5,h6{font-weight:300}h1 strong,h2 strong,h3 strong,h4 strong,h5 strong,h6 strong,h1 b,h2 b,h3 b,h4 b,h5 b,h6 b{font-weight:700}p{font-size:1rem}h1{font-size:2.618rem}h2{font-size:2.058rem}h3{font-size:1.618rem}h4{font-size:1.272rem}h5{font-size:1.000rem}h6{font-size:.786rem}h1>code{font-size:2.058rem}h2>code{font-size:1.618rem}h3>code{font-size:1.272rem}h4>code{font-size:1rem}h5>code{font-size:.786rem}h6>code{font-size:.618rem}html{max-width:100%}body{max-width:64rem;margin:0 auto;padding:1rem;word-wrap:break-word}table{width:100%}p,h1,h2,h3,h4,h5,h6,blockquote,pre,table,ol,ul{margin:0 0 1.272rem 0}li>ul,li>ol{margin-bottom:0}hr{margin:0}body>*:first-child,body>*:first-child>*:first-child,body>*:first-child>*:first-child>*:first-child,body>*:first-child>*:first-child>*:first-child>*:first-child,body>*:first-child>*:first-child>*:first-child>*:first-child>*:first-child,body>*:first-child>*:first-child>*:first-child>*:first-child>*:first-child>*:first-child,body>*:first-child>*:first-child>*:first-child>*:first-child>*:first-child>*:first-child>*:first-child{margin-bottom:0}blockquote>*:last-child{margin-bottom:1.272rem}blockquote>*:first-child{margin-top:1.272rem}blockquote{border-left-width:8px;border-left-style:solid;padding:0 1.272rem}hr,.vscode-dark hr,.vscode-light hr{height:0;border-width:1px;border-style:solid}h1,h2{border-bottom-width:0;border-bottom-style:none}h1,h2,h3,h4,h5,h6{margin-bottom:1.272rem}img{display:block;max-width:100%;margin-left:auto;margin-right:auto;page-break-inside:avoid !important;break-inside:avoid !important}@media print{.mermaid,.qrcode{page-break-inside:avoid !important;break-inside:avoid !important}}div.mermaid{margin-top:1.272rem;margin-bottom:1.272rem}code.language-customizeTheme,code.language-customizePage,pre:has(>code.language-customizeTheme),pre:has(>code.language-customizePage){display:none}pre,pre>code,.vscode-light pre,.vscode-dark pre,pre>code>code>div{color:#333;background-color:#f4f4f4}pre,.vscode-light pre,.vscode-dark pre{border-width:1px;border-color:#DDD;border-style:solid;border-radius:3px}pre{padding:.618rem 1.272rem;overflow-x:auto}@media print{pre{overflow-x:hidden}}div.md-embed{display:block;width:100%;margin-left:auto;margin-right:auto;page-break-inside:avoid !important;break-inside:avoid !important}img[src*='-full-'],div.md-embed[class*='-full-']{width:100%}img[src*='-seveneighthssize-'],div.md-embed[class*='-seveneighthssize-']{width:87.5%}img[src*='-fivesixthssize-'],div.md-embed[class*='-fivesixthssize-']{width:83.333%}img[src*='-threequarterssize-'],div.md-embed[class*='-threequarterssize-']{width:75%}img[src*='-twothirdssize-'],div.md-embed[class*='-twothirdssize-']{width:66.667%}img[src*='-fiveeighthssize-'],div.md-embed[class*='-fiveeighthssize-']{width:62.5%}img[src*='-halfsize-'],div.md-embed[class*='-halfsize-']{width:49%}img[src*='-thirdsize-'],div.md-embed[class*='-thirdsize-']{width:32%}img[src*='-quartersize-'],div.md-embed[class*='-quartersize-']{width:23.5%}img[src*='-sixthsize-'],div.md-embed[class*='-sixthsize-']{width:15%}img[src*='-eighthsize-'],div.md-embed[class*='eighthsize-']{width:10.75%}img[src*='-maxhalfsize-'],div.md-embed[class*='-maxhalfsize-']{max-width:49%}img[src*='-maxthirdsize-'],div.md-embed[class*='-maxthirdsize-']{max-width:32%}img[src*='-maxquartersize-'],div.md-embed[class*='-maxquartersize-']{max-width:23.5%}img[src*='-maxsixthsize-'],div.md-embed[class*='-maxsixthsize-']{max-width:15%}img[src*='-maxeighthsize-'],div.md-embed[class*='-maxeighthsize-']{max-width:10.75%}img[src*='-floatleft-'],div.md-embed[class*='-floatleft-']{float:left;margin-right:2%}img[src*='-floatright-'],div.md-embed[class*='-floatright-']{float:right;margin-left:2%}img[src*='-left-'],div.md-embed[class*='-left-']{margin-left:0}img[src*='-right-'],div.md-embed[class*='-right-']{margin-right:0}img[src*='-table-'],div.md-embed[class*='-table-']{margin-left:0;margin-right:0}a[href*='-title-']{display:none}.md-embed-group:after,.md-embed-padded-group:after{content:"";display:table;clear:both}.md-embed-padded-group{margin-top:1.272rem;margin-bottom:1.272rem}div.md-embed-notice.note{background:#e7f2fa}div.md-embed-notice.tip{background:#e6f9e6}div.md-embed-notice.info{background:#fff2db}div.md-embed-notice.warning{background:#fae2e2}div.md-embed-notice.note p:first-child{background:#6ab0de;color:#FFF;padding:.375rem 1rem}div.md-embed-notice.tip p:first-child{background:#77c577;color:#FFF;padding:.375rem 1rem}div.md-embed-notice.info p:first-child{background:#f0b37e;color:#FFF;padding:.375rem 1rem}div.md-embed-notice.warning p:first-child{background:#df6f6c;color:#FFF;padding:.375rem 1rem}div.md-embed-notice{margin:0 0 1.272rem 0;position:relative;border-radius:3px}div.md-embed-notice p:first-child{border-top-left-radius:3px;border-top-right-radius:3px}div.md-embed-notice>*{padding:15px;display:block;margin-top:0;margin-bottom:0}div.md-embed-title+h1,div.md-embed-title+h2{margin-bottom:.382rem}div.md-embed-title+h3,div.md-embed-title+h4,div.md-embed-title+h5,div.md-embed-title+h6{margin-bottom:0}@media(min-width:32rem){div#content>p:first-child+h1:first-of-type{margin-top:-1.8em;margin-bottom:1.8rem}div#content>p:first-child+h2:first-of-type{margin-top:-2em;margin-bottom:1.6rem}div#content>p:first-child+h1:first-of-type,div#content>p:first-child+h2:first-of-type{margin-left:.25em;border-bottom:0}div#content>p:first-child+h1:first-of-type,div#content>p:first-child+h2:first-of-type,div#content>p:first-child+h1:first-of-type strong,div#content>p:first-child+h2:first-of-type strong{color:white}div#content>p:first-child>img[src*='-banner-'],div#content>p:first-child>a>img[src*='-banner-']{border-bottom-width:.5em;border-bottom-color:#4872ae;border-bottom-style:solid;width:100%}div#content>p:first-child+h1:first-of-type a,div#content>p:first-child+h2:first-of-type a{text-decoration:none}}div#content>hr:last-of-type+p:last-child{font-size:.786rem;margin-top:.5rem;margin-bottom:0}pre code.hljs{padding:0}code.hljs{padding:0}.hljs{background:#f4f4f4}@media print{pre code.hljs,code.hljs{word-wrap:break-word}}
+</style>
+
+
+      
+    </head>
+    <body onload="onBodyLoad()">
+        <style>
+
+        </style>
+        <script id="markdown" type="text/markdown">
+## QR Code Applications
+
+### Share an URL to open in the browser
+
+##### URL
+
+```qrcode-sixthsize-left-
+https://www.startrek.com
+```
+```
+https://www.startrek.com
+```
+[]()
+### Send an email
+
+##### mailto uri
+`mailto:name@domain.com`
+
+Optional parameters, name=value, introduced with `?`, separated by `&`
+* `cc`: comma separated list of email addresses
+* `bcc`: comma separated list of email addresses
+* `subject`: [URL-Encoded](https://www.w3schools.com/tags//ref_urlencode.asp) string
+* `body`: [URL-Encoded](https://www.w3schools.com/tags//ref_urlencode.asp) string
+
+Example: 
+```qrcode-sixthsize-left-
+mailto:jimkirk@starfleet.fed?cc=spock@starfleet.fed,montys@starfleet.fed&subject=Party%20For%20Bones&body=RSVP:%20I%20am%20coming!
+```
+```
+mailto:jimkirk@starfleet.fed?cc=spock@starfleet.fed,montys@starfleet.fed&subject=Party%20For%20Bones&body=RSVP:%20I%20am%20coming!
+```
+
+See [RFC-6068](https://www.rfc-editor.org/rfc/rfc6068.txt) for reference.
+
+### Send a text message
+
+##### sms uri
+
+`sms:phone-number`
+
+Optional parameter, name=value, introduced with `?`
+* `body`: [URL-Encoded](https://www.w3schools.com/tags//ref_urlencode.asp) string
+
+`sms:phone-number:message` also seems to be recognized in practice.
+
+```qrcode-sixthsize-left-
+sms:5551212?body=RSVP:%20I'm%20Coming!
+```
+```
+sms:5551212?body=RSVP:%20I'm%20Coming!
+```
+
+See [RFC-5724](https://www.rfc-editor.org/rfc/rfc5724.txt) for reference.
+### Make a phone call
+
+##### tel uri
+
+```qrcode-sixthsize-left-
+tel:555-1212
+```
+```
+tel:555-1212
+```
+
+See [RFC-3966](https://www.rfc-editor.org/rfc/rfc3966.txt) for reference.
+
+### Share contact info
+
+##### MECARD
+
+`MECARD:` followed by a sequence of `tag:value;` followed by another semicolon.
+
+Tags:
+* `ADR`: Address
+* `BDAY`: Birthday `YYYYMMDD`
+* `EMAIL`: Email Address
+* `N`: Name: Last, First
+* `NICKNAME`
+* `NOTE`
+* `SOUND`: Kana Name: Last, First 
+* `TEL`: Telephone Number
+* `TEL-AV`: Video Telephone Number
+* `URL`: Personal Website
+
+```qrcode-sixthsize-left-
+MECARD:N:Kirk,James;ADR:60 Greene St, Riverside, IA, USA 52327;EMAIL:jimkirk@starfleet.fed;URL:https://www.startrek.com;;
+```
+```
+MECARD:N:Kirk,James;ADR:60 Greene St, Riverside, IA, USA 52327;EMAIL:jimkirk@starfleet.fed;URL:https://www.startrek.com;;
+```
+
+See [MeCard_(QR_code)](https://en.wikipedia.org/wiki/MeCard_(QR_code)) for reference.
+
+##### vCard
+
+Supposedly kinda works but large and complex.  Left as an exercise for the reader.
+
+```qrcode-sixthsize-left
+BEGIN:VCARD
+VERSION:3.0
+N:Kirk;James;;;
+FN:Jim Kirk
+TITLE:Captain
+EMAIL;TYPE=INTERNET;TYPE=WORK;TYPE=PREF:jimkirk@starfleet.fed
+URL;TYPE=Homepage:https://startrek.com
+END:VCARD
+```
+```
+BEGIN:VCARD
+VERSION:3.0
+N:Kirk;James;;;
+FN:Jim Kirk
+TITLE:Captain
+EMAIL;TYPE=INTERNET;TYPE=WORK;TYPE=PREF:jimkirk@starfleet.fed
+URL;TYPE=Homepage:https://startrek.com
+END:VCARD
+```
+
+See [RFC-6350](https://www.rfc-editor.org/rfc/rfc6350.txt) for reference.
+
+### Share a location
+
+##### geo uri
+
+This is not well supported widely.
+
+`geo:latitude,longitude`
+
+Optional unofficial parameters, name=value, introduced with `?`, separated by `&`
+* q: latitude,longitude
+* z: zoom level 1-21
+
+It may work best to specify the same location in the uri and in the `q` parameter.
+The `q` parameter may also support a [plus code](https://maps.google.com/pluscodes/) on some Android devices.
+
+```qrcode-sixthsize-left-
+geo:41.479911,-91.580276?q=41.479911,-91.580276&z=21
+```
+```
+geo:41.479911,-91.580276?q=41.479911,-91.580276&z=21
+```
+
+See [RFC-5870](https://www.rfc-editor.org/rfc/rfc5870.txt) for reference.
+
+##### Web link to mapping service
+
+Because of the lack of support (and perhaps the reason for it), it might be more reliable to specify a location as a link to a mapping service. They can offer more functionality than a `geo` URI can, such as the ability to recognize plus codes.
+
+See [Plus Codes](https://maps.google.com/pluscodes/) and 
+[Google Maps URL documentation](https://developers.google.com/maps/documentation/urls/get-started). Be sure to [URL-Encode](https://www.w3schools.com/tags//ref_urlencode.asp) as directed, replacing comma with `%2C`, plus with `%2B`, and space with `%20`. 
+
+Some examples:
+
+Search on Google Maps using a plus code:
+```qrcode-sixthsize-left-
+https://www.google.com/maps/search/?api=1&query=86HCFCH9%2BXV9
+```
+```
+https://www.google.com/maps/search/?api=1&query=86HCFCH9%2BXV9
+```
+Directions on Google Maps using latitude & longitude:
+```qrcode-sixthsize-left-
+https://www.google.com/maps/dir/?api=1&destination=41.479911%2C-91.580276
+```
+```
+https://www.google.com/maps/dir/?api=1&destination=41.479911%2C-91.580276
+```
+Open Google Maps using latitude & longitude:
+```qrcode-sixthsize-left-
+https://www.google.com/maps/@?api=1&map_action=map&center=41.479911%2C-91.580276&zoom=21
+```
+```
+https://www.google.com/maps/@?api=1&map_action=map&center=41.479911%2C-91.580276&zoom=21
+```
+DuckDuckGo map using latitude & longitude:
+```qrcode-sixthsize-left-
+https://duckduckgo.com/?q=41.479911%2C-91.580276&iaxm=maps
+```
+```
+https://duckduckgo.com/?q=41.479911%2C-91.580276&iaxm=maps
+```
+OpenStreetMap using latitude & longitude:
+```qrcode-sixthsize-left-
+https://www.openstreetmap.org/#map=19/41.479911/-91.580276
+```
+```
+https://www.openstreetmap.org/#map=19/41.479911/-91.580276
+```
+
+### Share an event
+
+##### VEVENT
+
+Specify the time of an event in the VEVENT format of iCalendar.
+
+Also not well-supported.  Below is the only subset I found works: an explicit time zone.
+
+```qrcode-sixthsize-left
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:22280322T000000
+DTEND;TZID=America/Chicago:22280322T235959
+SUMMARY:Captain Kirk's Birthday
+END:VEVENT
+```
+```
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:22280322T000000
+DTEND;TZID=America/Chicago:22280322T235959
+SUMMARY:Captain Kirk's Birthday
+END:VEVENT
+```
+
+See [RFC-5545](https://www.rfc-editor.org/rfc/rfc5545.txt) for reference.
+
+### Connect to Wi-Fi
+
+##### WIFI
+
+`WIFI:` followed by a sequence of `tag:value;` followed by another semicolon.
+
+Tags:
+* `T`: Authentication Type, `WEP`, `WPA`, `WPA2-EAP`, `nopass`
+* `S`: SSID
+* `P`: Password
+* `H`: Hidden, `true`, `false`
+* `E`: EAP method, `TTLS`, `PWD` (WPA2-EAP only)
+* `A`: Anonymous Identity, `anon` (WPA2-EAP only)
+* `I`: Identity, `myidentity` (WPA2-EAP only)
+* `PH2`: Phase 2 method, `MSCHAPV2` (WPA2-EAP only)
+
+```qrcode-sixthsize-left-
+WIFI:T:WPA;S:NCC1701D;P:Resistance is not futile;;
+```
+```
+WIFI:T:WPA;S:NCC1701D;P:Resistance is not futile;;
+```
+
+See [WPA3 Specification](https://www.wi-fi.org/system/files/WPA3%20Specification%20v3.5.pdf#page=33) for reference.
+
+
+### Share a One-Time-Password token
+
+##### otpauth uri
+
+QR Codes like this are generated by an identity provider and scanned using a 
+one-time-password (OTP) application (aka authenticator application).  They contain a secret that is shared between the identity provider and the otp application, along with algorithm parameters for calculating a one-time-password. Not all authenticator apps implement the parameters, so the default values are almost always what are used.
+
+```qrcode-sixthsize-left-
+otpauth://totp/Starfleet:jimkirk%40starfleet.fed?issuer=Starfleet&secret=SCGZ3I55D76X6L75WHX3H7M7HH3SEDU4
+```
+```
+otpauth://totp/Starfleet:kimkirk%40starfleet.fed?issuer=Starfleet&secret=SCGZ3I55D76X6L75WHX3H7M7HH3SEDU4
+```
+
+See [Key Uri Format](https://github.com/google/google-authenticator/wiki/Key-Uri-Format), [RFC-6238](https://www.rfc-editor.org/rfc/rfc6238), and [RFC-4226](https://www.rfc-editor.org/rfc/rfc4226) for reference.
+
+##### phonefactor uri
+
+This is the private method Microsoft's Authenticator app is linked with an account.
+
+
+### References
+https://github.com/zxing/zxing/wiki/Barcode-Contents  
+        </script>
+        <div id="content"></div>
+    </body>
+</html>
